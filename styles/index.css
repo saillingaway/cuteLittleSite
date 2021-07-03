@@ -1,0 +1,24 @@
+.container {
+  background: #daccf0;
+  overflow: hidden;
+}
+
+.item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1em;
+  width: 3em;
+  height: 3em;
+  --az: calc(var(--i)*1turn/var(--n));
+  -webkit-transform: rotate(var(--az)) translate(4em) rotate(calc(-1*var(--az)));
+          transform: rotate(var(--az)) translate(4em) rotate(calc(-1*var(--az)));
+  font: 2em/ 2 trebuchet ms, sans-serif;
+  text-align: center;
+  counter-reset: i var(--i);
+}
+
+.item::before {
+  content: " ";
+}
+/*# sourceMappingURL=index.css.map */

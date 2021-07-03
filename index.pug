@@ -1,0 +1,38 @@
+//- index.pug
+doctype html
+|
+|
+- let n = 5;
+- let pages = ['index', 'art', 'about', 'contact','resume']
+- let imgs = ['heart.png', 'art.png', 'tangerine.png', 'contact2.png', 'question2.png'];
+html
+	|
+	|
+	include includes/head.pug
+	|
+	|
+	body(class='container')
+		|
+		|
+		div(class="content")
+			|
+			|
+			div(style=`--n: ${n}`)
+				- for(let i = 0; i < n; i++)
+					|
+					|
+					a(href=`./${pages[i]}.html`,
+						class="item"
+						style={
+							"--i": `${i}`,
+							"background-image": `url(./img/${imgs[i]})`,
+							"background-repeat": 'no-repeat'
+					})
+				|
+				|
+			|
+			|
+		|
+		|
+	|
+	|

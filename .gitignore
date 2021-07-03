@@ -1,0 +1,8 @@
+# ignore the old files for now
+old-index.html
+working-index.html
+/scripts
+# ignore my art files
+/img
+
+

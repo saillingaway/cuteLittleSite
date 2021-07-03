@@ -1,0 +1,51 @@
+$d: 2em;
+$platinum: hsla(60, 5%, 88%, 1);
+  $light-gray: hsla(60, 3%, 82%, 1);
+  $champagne-pink: hsla(22, 34%, 83%, 1);
+  $unbleached-silk: hsla(25, 76%, 87%, 1);
+  $papaya-whip: hsla(43, 82%, 89%, 1);
+  $light-cyan: hsla(167, 33%, 84%, 1);
+  $beau-blue: hsla(207, 61%, 86%, 1);
+  $languid-lavender: hsla(264, 54%, 87%, 1);
+  $orchid-pink: hsla(327, 63%, 86%, 1);
+  $baby-pink: hsla(356, 81%, 88%, 1);
+
+.container {
+  background: $languid-lavender;
+  overflow: hidden;
+  // overflow-y: auto;
+  // overflow-x: auto;
+}
+.content {
+  // width: 80%;
+  // height: 80%;
+}
+
+.icon {
+
+}
+
+.item {
+	position: absolute;
+	top: 40%; left: 40%;
+	margin: -.5*$d;
+	width: 1.5*$d; height: 1.5*$d; 
+  //width: 150px; height: 150px;
+	//border-radius: 50%; // makes it rounded
+	--az: calc(var(--i)*1turn/var(--n));
+	transform: rotate(var(--az)) 
+		translate(2*$d)
+		rotate(calc(-1*var(--az)));
+  //background: silver;
+	font: 2em/ 2 trebuchet ms, sans-serif;
+	text-align: center;
+	counter-reset: i var(--i);
+	
+	&::before { 
+    //content: counter(i);
+    content: " ";
+    //content: url('../img/heart-icon.png');
+    // ^ when like this, can't change the dimensions of the image
+    //background: url('../img/kitchen.jpg');
+  }
+}
